@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dilivery.css">
+
+    <title>Доставка</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Главная</a
+              >
+            </li>
+            <li class="nav-item my_nav_item">
+              <a class="nav-link" href="production.html">Производство</a>
+            </li>
+            <li class="nav-item my_nav_item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="nav-item my_nav_item">
+              <a class="nav-link active" href="delivery.html">Доставка</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="row delivery">
+          <h1>Доставка</h1>
+          <h4 class="text-center">Отгружаем продукцию физическим и юридическим лицам по всей территории России</h4>
+          <div class="myblock">
+            <h4 class="delivery_item">Условия доставки:</h4>
+          <ul>
+            <li class="delivery_item">Доставка осуществляется транспортными компаниями</li>
+            <li>Возможен самовывоз со скалада по адресу: 433504, Россия, Ульяновская обл., г. Димитровград, ул. Промышленная, д. 55А</li>
+            <li>Высылаем бесплатно образцы курьеской службой по запросу</li>
+          </ul>
+          <button
+          type="button"
+          class="btn btn-primary my_btn"
+          data-bs-toggle="modal"
+          data-bs-target="#get_free_staff"
+        >
+          Заказать бесплатный образец
+        </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div
+    class="modal fade"
+    id="get_free_staff"
+    tabindex="-1"
+    aria-labelledby="get_free_staffLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="get_free_staffLabel">
+            Параметры заказа
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-center">
+            <input
+              type="text"
+              placeholder="Наименование организации"
+              name=""
+              id=""
+              class="modal_data"
+            />
+            <input
+              type="text"
+              placeholder="Ваше имя"
+              name=""
+              id=""
+              class="modal_data"
+            />
+            <input
+              type="text"
+              placeholder="Ваш email"
+              name=""
+              id=""
+              class="modal_data"
+            />
+            <input
+              type="text"
+              placeholder="Ваш номер телефона"
+              name=""
+              id=""
+              class="modal_data"
+            />
+            <input
+              type="text"
+              placeholder="Ваш адрес"
+              name=""
+              id=""
+              class="modal_data"
+            />
+            <textarea
+              placeholder="Пожелания к заказу"
+              name=""
+              id=""
+              cols="30"
+              rows="5"
+              class="modal_data"
+            ></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Закрыть
+          </button>
+          <button type="button" class="btn btn-primary">
+            Заказать
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+      <div class="container">
+        <div
+          class="row align-self-center justify-content-between d-flex text-center"
+        >
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <img src="" alt="Logo" class="footer_item logo" />
+            <div class="footer_item">© 2023 Все права защищены</div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <h4>Наши контакты</h4>
+            <h4 id="our_number">+7 (927) 270-55-25</h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

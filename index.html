@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Главная</title>
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/"
+                >Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="production.html">Производство</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="delivery.html">Доставка</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <h1 class="main_h1">КРЫШКИ ФЛИП-ТОП 28/415 BPF</h1>
+
+      <section class="main_previe">
+        <div class="container">
+          <div class="row">
+            <div
+              id="main_previe_item_img"
+              class="main_previe_item col-12 col-xs-4 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+            >
+              <div
+                id="carouselExampleControls"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="/imges/big/first.png.jpg"
+                      class="d-block w-100 main_previe_carusel_img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="/imges/big/second.jpg"
+                      class="d-block w-100 main_previe_carusel_img"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="main_previe_item col-12 col-xs-4 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+            >
+              <h3 class="text-center">Характеристики</h3>
+              <ul>
+                <li><b>Материал:</b> первичный ПНД.</li>
+                <li><b>Тип резьбы:</b> 28/415</li>
+                <li><b>Цвет:</b> белый</li>
+              </ul>
+            </div>
+            <div
+              class="main_previe_item col-xs-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4"
+            >
+              <h3 class="text-center">Цены на товары:</h3>
+              <table class="table text-center table-bordered">
+                <tbody>
+                  <tr>
+                    <th>От 50000 шт</th>
+                    <td>1,50 руб. с НДС</td>
+                  </tr>
+                  <tr>
+                    <th>До 50000 шт</th>
+                    <td>1.55 руб. с НДС</td>
+                  </tr>
+                  <tr>
+                    <th>До 10000 шт</th>
+                    <td>1.70 руб. с НДС</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="quantity">
+                <div class="row d-flex justify-content-center">
+                  <input type="button" value="-" class="quantity_btn minus" />
+                  <input
+                    type="number"
+                    step="1"
+                    min="1"
+                    value="2000"
+                    title="Кол-во"
+                    size="4"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                    aria-labelledby="Количество Крышка флип-топ"
+                    name="quantity"
+                    id="num_of_product"
+                  />
+                  <input type="button" value="+" class="quantity_btn plus" />
+
+                  <button
+                    type="button"
+                    class="btn btn-primary my_btn"
+                    id="pay_btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#buySomeProduct"
+                    onclick="setNumOfProduct()"
+                  >
+                    Купить
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary my_btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#get_free_staff"
+                  >
+                    Заказать бесплатный образец
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="get_free_staff"
+            tabindex="-1"
+            aria-labelledby="get_free_staffLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="get_free_staffLabel">
+                    Параметры заказа
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row justify-content-center">
+                    <input
+                      type="text"
+                      placeholder="Наименование организации"
+                      name=""
+                      id=""
+                      class="modal_data"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Ваше имя"
+                      name=""
+                      id=""
+                      class="modal_data"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Ваш email"
+                      name=""
+                      id=""
+                      class="modal_data"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Ваш номер телефона"
+                      name=""
+                      id=""
+                      class="modal_data"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Ваш адрес"
+                      name=""
+                      id=""
+                      class="modal_data"
+                    />
+                    <textarea
+                      placeholder="Пожелания к заказу"
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="5"
+                      class="modal_data"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Закрыть
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Заказать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="buySomeProduct"
+            tabindex="-1"
+            aria-labelledby="buySomeProductLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="buySomeProductLabel">
+                    Параметры заказа
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row justify-content-center">
+                    <input
+                      type="text"
+                      placeholder="Наименование организации"
+                      name=""
+                      id=""
+                      class="modal_data"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Ваше имя"
+                      name=""
+                      id=""
+                      class="modal_data"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Ваш email"
+                      name=""
+                      id=""
+                      class="modal_data"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Ваш номер телефона"
+                      name=""
+                      id=""
+                      class="modal_data"
+                    />
+                    <textarea
+                      placeholder="Пожелания к заказу"
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="5"
+                      class="modal_data"
+                    ></textarea>
+                    <p id="num_of_product_modal" class="modal_data">Количество товара: </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Закрыть
+                  </button>
+                  <button type="button" class="btn btn-primary">Купить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row description">
+            <h4 class="">Описание</h4>
+            <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7">
+              <p>
+                <b>Материалы:</b> Первичный ПНД - это полиэтилен высокой
+                плотности, который производится из первичных сырьевых материалов.
+                Он обладает высокой прочностью, устойчивостью к химическим
+                воздействиям и низкой плотностью. Первичный ПНД широко
+                используется в производстве различных изделий, таких как трубы,
+                контейнеры, упаковка и другие изделия, которые требуют высокой
+                прочности и устойчивости к воздействию внешних факторов. Благодаря
+                своим уникальным свойствам, первичный ПНД является одним из
+                наиболее востребованных материалов в различных отраслях
+                промышленности.
+              </p>
+              <p>
+                <b>Свойство:</b> Крышки флип-топ обладают высокой прочностью и
+                устойчивостью к воздействию внешних факторов. Они легко
+                открываются одной рукой благодаря удобному механизму открывания и
+                надежно закрываются, предотвращая проливание содержимого. Крышки
+                флип-топ также обладают хорошей герметичностью, что позволяет
+                сохранять свежесть и качество продуктов в упаковке. Благодаря
+                своей низкой плотности, они легкие и удобные в использовании.
+              </p>
+
+            </div>
+            <div id="description_img_parent" class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
+              <img id="description_img" src="./imges/big/third.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="olast_primenenia">
+        <div class="container">
+          <h1 class="text-center">Области применения</h1>
+          <div class="row">
+            <div class="item_card align-items-center justify-content-center">
+              <img
+                src="/imges/little/dishwashing-liquid-and-clean-plate.png"
+                alt=""
+                class="item_card_img col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"
+              />
+              <div
+                class="item_card_text col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8"
+              >
+                Для тары с чистящими и моющими средствами, в том числе
+                хлорсодержащими: для посуды, сантехники, кафельным и стеклянных
+                покрытий.
+              </div>
+            </div>
+            <div class="item_card align-items-center justify-content-center">
+              <img
+                src="/imges/little/shampoo.png"
+                alt=""
+                class="item_card_img col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"
+              />
+              <div
+                class="item_card_text col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8"
+              >
+                Для упаковки шампуней и гелей, кондиционеров и других
+                косметологических продкутов.
+              </div>
+            </div>
+            <div class="item_card align-items-center justify-content-center">
+              <img
+                src="/imges/little/medicine.png"
+                alt=""
+                class="item_card_img col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"
+              />
+              <div
+                class="item_card_text col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8"
+              >
+                Для флаконов с фармацевтическими препаратами, биодобавками.
+              </div>
+            </div>
+            <div class="item_card align-items-center justify-content-center">
+              <img
+                src="/imges/little/antiseptic.png"
+                alt=""
+                class="item_card_img col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"
+              />
+              <div
+                class="item_card_text col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8"
+              >
+                Крышки флип-топ для антисептиков.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="preimyshestva">
+        <div class="container">
+          <div class="row">
+            <h1>Преимущества работы с нами</h1>
+            <div class="item_card align-items-center justify-content-center">
+              <img
+                src="/imges/little/paint-board-and-brush.png"
+                alt=""
+                class="item_card_img col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"
+              />
+              <div
+                class="item_card_text col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8"
+              >
+                Возможно окрашивание в различные цвета по предварительному
+                заказу.
+              </div>
+            </div>
+            <div class="item_card align-items-center justify-content-center">
+              <img
+                src="/imges/little/like.png"
+                alt=""
+                class="item_card_img col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"
+              />
+              <div
+                class="item_card_text col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8"
+              >
+                Гарантируем качество и сроки поставок.
+              </div>
+            </div>
+            <div class="item_card align-items-center justify-content-center">
+              <img
+                src="/imges/little/tag.png"
+                alt=""
+                class="item_card_img col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"
+              />
+              <div
+                class="item_card_text col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8"
+              >
+                Гибкая система скидок и сроков оплаты.
+              </div>
+            </div>
+            <div class="item_card align-items-center justify-content-center">
+              <img
+                src="/imges/little/shipping.png"
+                alt=""
+                class="item_card_img col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"
+              />
+              <div
+                class="item_card_text col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8"
+              >
+                Высылаем бесплатные образцы по запросу.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="any_question">
+        <div class="container">
+          <div class="row justify-content-center">
+            <h1 id="any_question_h1">Остались вопросы?</h1>
+
+            <h6 class="text-center">Оставьте заявку, мы свяжемся с Вами!</h6>
+
+            <input
+              type="text"
+              name=""
+              id=""
+              class="any_question_item col-10 col-xs-6 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6"
+              placeholder="Ваше имя"
+            />
+          </div>
+          <div class="row justify-content-center">
+            <input
+              type="text"
+              name=""
+              id=""
+              class="any_question_item col-10 col-xs-6 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6"
+              placeholder="Название компании"
+            />
+          </div>
+          <div class="row justify-content-center">
+            <input
+              type="text"
+              name=""
+              id=""
+              class="any_question_item col-10 col-xs-6 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6"
+              placeholder="Контактный телефон"
+            />
+          </div>
+          <div class="row justify-content-center">
+            <textarea
+              name=""
+              id="any_question_item_big"
+              cols="80"
+              rows="24"
+              class="any_question_item col-10 col-xs-6 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6"
+              placeholder="Ваш вопрос (опишите Ваш вопрос или оставьте поле пустым)"
+            ></textarea>
+          </div>
+          <div class="row justify-content-center">
+            <input
+              type="button"
+              value="Отправить заявку"
+              class="any_question_item col-6 col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div
+          class="row align-self-center justify-content-between d-flex text-center"
+        >
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <img src="" alt="Logo" class="footer_item logo" />
+            <div class="footer_item">© 2023 Все права защищены</div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <h4>Наши контакты</h4>
+            <h4 id="our_number">+7 (927) 270-55-25</h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

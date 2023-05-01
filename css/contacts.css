@@ -1,0 +1,67 @@
+:root{
+  --detail_category_item_TextSize: 1rem;
+}
+
+.requisites {
+  border: 2px #ccc solid;
+  margin: auto;
+  padding: 0 10px;
+}
+
+/*TODO -> СДЕЛАТЬ НОРМИС БОРДЕР*/
+@media screen and (min-width: 1200px) {
+  .requisites {
+    border: 2px #ccc solid;
+    margin: auto;
+    width: 75%;
+    padding: 0 10px;
+  }
+  
+}
+
+.adresses {
+  font-size: 22px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.contacts > h1 {
+  margin-bottom: 20px;
+}
+
+.detail_category {
+  margin-top: var(--gap_section);
+}
+
+.detail_category_header {
+  margin-bottom: 0 0 1.875rem;
+}
+
+.detail_category_list {
+  margin-bottom: 1.40625rem;
+}
+
+.detail_category_item{
+  font-size: var(--detail_category_item_TextSize);
+}
+
+.detail_category_item>div{
+  text-transform: none;
+  font-size: var(--detail_category_item_TextSize);
+  font-weight: 400;
+  display: table-cell;
+  width: auto;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .detail_category_item::after{
+    transform: translateX(5px) translateY(1px);
+    width: 100%;
+    display: table-cell;
+    content: "";
+    background: -webkit-linear-gradient(left,rgba(0,0,0,.2) 35%,transparent 0) repeat-x 0 15px;
+    background: linear-gradient(90deg,rgba(0,0,0,.2) 35%,transparent 0) repeat-x 0 15px;
+    background-size: .3125rem .125rem
+  }
+}
