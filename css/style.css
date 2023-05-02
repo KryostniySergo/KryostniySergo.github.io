@@ -1,240 +1,232 @@
-:root{
-    --card_gap: 40px;
-    --navbar_bg_color: #4a565e;
-    --navbar_text_color: #f0f0f0;
-    --button_bg_color: #2E3F7F;
-    --preimyshestva_bg_color: #eaeaea; /*eaeaea*/
-    --border_color_of_main: #cecece; /*efefef*/
-    --gap_section: 20px;
+:root {
+  --card_gap: 40px;
+  --navbar_bg_color: #4a565e;
+  --navbar_text_color: #f0f0f0;
+  --button_bg_color: #2e3f7f;
+  --preimyshestva_bg_color: #eaeaea; /*eaeaea*/
+  --border_color_of_main: #cecece; /*efefef*/
+  --gap_section: 20px;
 }
 
-body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    min-height: 75rem;
-    padding-top: 4.5rem; 
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 75rem;
+  padding-top: 4.5rem;
 
-    /*УБРАТЬ ЦВЕТА*/
-    color: #424c56;;
-    background-color: hsla(0, 0%, 96%, 0.589);
+  /*УБРАТЬ ЦВЕТА*/
+  color: #424c56;
+  background-color: hsla(0, 0%, 96%, 0.589);
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-.main_h1{
-    margin: 20px 0;
+.main_h1 {
+  margin: 20px 0;
 }
 
 /*NAVBAR*/
 
-.nav-item{
-    font-size: 25px;
-    padding: 0 2rem;
+.nav-item {
+  font-size: 25px;
+  padding: 0 2rem;
 }
 
-
-.navbar{
-    background-color: var(--navbar_bg_color);
+.navbar {
+  background-color: var(--navbar_bg_color);
 }
 
-.nav-link{
-    color: var(--navbar_text_color);
+.nav-link {
+  color: var(--navbar_text_color);
 }
 
-.nav-link:hover{
-    color: hsla(0, 0%, 96%, 0.589)
+.nav-link:hover {
+  color: hsla(0, 0%, 96%, 0.589);
 }
 
-.nav-link:active{
-    color: hsl(0, 0%, 41%)
+.nav-link:active {
+  color: hsl(0, 0%, 41%);
 }
 
-.navbar-toggler-icon{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-
 
 /*Main_previe*/
 
-.main_previe{
-    margin-bottom: var(--gap_section);
+.main_previe {
+  margin-bottom: var(--gap_section);
 }
 
-.main_previe_item{
-    border: 1px var(--border_color_of_main) solid;
+.main_previe_item {
+  border: 1px var(--border_color_of_main) solid;
 }
-
 
 /*Поменять*/
-@media screen and (min-width: 400px) and (max-width: 575px){
-    #main_previe_item_img{
-        padding: 0 50px;
-    }
+@media screen and (min-width: 400px) and (max-width: 575px) {
+  #main_previe_item_img {
+    padding: 0 50px;
+  }
 }
 
-.main_previe_carusel_img{
-    width: 365px;
-    max-height: 400px;
+.main_previe_carusel_img {
+  width: 365px;
+  max-height: 400px;
 }
 
-
-.main_previe_item{
-    padding: 10px;
+.main_previe_item {
+  padding: 10px;
 }
 
-.main_previe_item>ul{
-    list-style: none;
-    font-size: 25px;
+.main_previe_item > ul {
+  list-style: none;
+  font-size: 25px;
 }
 
-.quantity{
-    font-size: 25px;
-    max-height: 300px;
+.quantity {
+  font-size: 25px;
+  max-height: 300px;
 }
 
-.quantity_btn{
-    width: 75px;
-    text-align: center;
-    padding: 10px 10px;
+.quantity_btn {
+  width: 75px;
+  text-align: center;
+  padding: 10px 10px;
 }
 
-#num_of_product{
-    width: 200px;
-    text-align: center;
-    padding: 10px 10px;
+#num_of_product {
+  width: 200px;
+  text-align: center;
+  padding: 10px 10px;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-    #num_of_product{
-        width: 50%;
-        text-align: center;
-        padding: 10px 10px;
-    }
+  #num_of_product {
+    width: 50%;
+    text-align: center;
+    padding: 10px 10px;
+  }
 }
 
-
-.my_btn{
-    width: 80%;
-    margin-top: 10px;
-    background-color: var(--button_bg_color);
+.my_btn {
+  width: 80%;
+  margin-top: 10px;
+  background-color: var(--button_bg_color);
 }
 
-#description_img_parent{
-    display: flex;
-    justify-content: end;
+#description_img_parent {
+  display: flex;
+  justify-content: end;
 }
 
-#description_img{
-    width: 100%;
+#description_img {
+  width: 100%;
 }
 /*Что то сделать после 1000px*/
-@media screen and (min-width: 1200px){
-    #description_img_parent{
-        display: flex;
-        justify-content: end;
-        padding-right: 0;
-    }
-    
+@media screen and (min-width: 1200px) {
+  #description_img_parent {
+    display: flex;
+    justify-content: end;
+    padding-right: 0;
+  }
 }
 
-@media screen and (min-width: 1400px){
-    #description_img_parent{
-        display: flex;
-        justify-content: end;
-    }
+@media screen and (min-width: 1400px) {
+  #description_img_parent {
+    display: flex;
+    justify-content: end;
+  }
 
-    #description_img{
-        width: 75%;
-    }
+  #description_img {
+    width: 75%;
+  }
 }
 
 /*Modal*/
 
-.modal_data{
-    display: flex;
-    justify-content: center;
-    width: 75%;
-    padding: 10px;
-    margin-bottom: 10px;
+.modal_data {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 /*Olast_primenenia*/
 
-.olast_primenenia{
-    padding: var(--gap_section) 0;
-    background-color: var(--preimyshestva_bg_color);
+.olast_primenenia {
+  padding: var(--gap_section) 0;
+  background-color: var(--preimyshestva_bg_color);
 }
 
-.item_card{
-    display: flex;
-    padding: 20px;
-    margin-bottom: 10px;
+.item_card {
+  display: flex;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
-.item_card_img{
-    height: 100px;
-    width: 100px;
-    
+.item_card_img {
+  height: 100px;
+  width: 100px;
 }
 
-.item_card_text{
-    font-size: 25px;
-    margin-left: var(--card_gap);
+.item_card_text {
+  font-size: 25px;
+  margin-left: var(--card_gap);
 }
 
 @media screen and (max-width: 400px) {
-    .item_card_img{
-        height: 100px;
-        width: 100px;
-        margin: 0;
-    }
+  .item_card_img {
+    height: 100px;
+    width: 100px;
+    margin: 0;
+  }
 
-    .item_card_text{
-        font-size: 22px;
-        padding-left: 20px;
-    }
+  .item_card_text {
+    font-size: 22px;
+    padding-left: 20px;
+  }
 }
 
 @media screen and (max-width: 399px) {
-    .item_card_text{
-        font-size: 22px;
-        padding-left: 0px;
-    }
-
+  .item_card_text {
+    font-size: 22px;
+    padding-left: 0px;
+  }
 }
 
 /*preimyshestva*/
 
-.preimyshestva{
-    padding-top: var(--gap_section);
+.preimyshestva {
+  padding-top: var(--gap_section);
 }
 
 /*any_question*/
 
-.any_question{
-    padding: var(--gap_section) 0;
-    background-color: var(--preimyshestva_bg_color);
+.any_question {
+  padding: var(--gap_section) 0;
+  background-color: var(--preimyshestva_bg_color);
 }
 
-#any_question_h1{
-    padding-bottom: var(--gap_section);
+#any_question_h1 {
+  padding-bottom: var(--gap_section);
 }
 
-.any_question_item{
-    margin-bottom: 20px;
-    height: 3.125rem;
-    padding: .5rem .9375rem;
-    background-color: hsla(0,0%,100%,.8);
-    border: 2px solid rgba(0,0,0,.25);
+.any_question_item {
+  margin-bottom: 20px;
+  height: 3.125rem;
+  padding: 0.5rem 0.9375rem;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.25);
 }
-#any_question_item_big{
-    height: 200px;
+#any_question_item_big {
+  height: 200px;
 }
-
 
 /*Footer*/
-footer{
-    background-color: var(--navbar_bg_color);
-    color: var(--navbar_text_color);
+footer {
+  background-color: var(--navbar_bg_color);
+  color: var(--navbar_text_color);
 }

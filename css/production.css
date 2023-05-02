@@ -1,17 +1,17 @@
-body{
-    min-height: auto;
+body {
+  min-height: auto;
 }
 
-.production{
-    font-size: 20px;
-    margin-bottom: var(--gap_section);
+.production {
+  font-size: 20px;
+  margin-bottom: var(--gap_section);
 }
 
-.text_bla{
-    margin: var(--gap_section) 0;
+.text_bla {
+  margin: var(--gap_section) 0;
 }
 
-.production>img{
-    margin: auto;
-    width: 400px;
+.production > img {
+  margin: auto;
+  width: 400px;
 }

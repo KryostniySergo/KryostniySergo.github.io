@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/dilivery.css">
+    <link rel="stylesheet" href="./css/dilivery.css" />
 
     <title>Доставка</title>
   </head>
@@ -59,22 +59,35 @@
       <div class="container">
         <div class="row delivery">
           <h1>Доставка</h1>
-          <h4 class="text-center">Отгружаем продукцию физическим и юридическим лицам по всей территории России</h4>
-          <div class="myblock">
-            <h4 class="delivery_item">Условия доставки:</h4>
-          <ul>
-            <li class="delivery_item">Доставка осуществляется транспортными компаниями</li>
-            <li>Возможен самовывоз со скалада по адресу: 433504, Россия, Ульяновская обл., г. Димитровград, ул. Промышленная, д. 55А</li>
-            <li>Высылаем бесплатно образцы курьеской службой по запросу</li>
-          </ul>
-          <button
-          type="button"
-          class="btn btn-primary my_btn"
-          data-bs-toggle="modal"
-          data-bs-target="#get_free_staff"
-        >
-          Заказать бесплатный образец
-        </button>
+          <h2 class="text-center">
+            Отгружаем продукцию физическим и юридическим лицам по всей
+            территории России!
+          </h2>
+
+          <div id="delivery_item_big" class="delivery_item">Условия доставки:</div>
+          <div class="delivery_item">
+            Доставка осуществляется транспортными компаниями
+          </div>
+          <div id="delivery_item_second" class="delivery_item">
+            Возможен самовывоз со скалада по адресу: 433504, Россия, Ульяновская
+            обл., г. Димитровград, ул. Промышленная, д. 55А
+            <script
+              type="text/javascript"
+              charset="utf-8"
+              async
+              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6f47fc7d2b691887f58e98eeb6d470db43c03ce62115722d286159e6d7e6d450&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
+            ></script>
+          </div>
+          <div class="delivery_item">
+            Высылаем бесплатно образцы курьеской службой по запросу
+            <button
+              type="button"
+              class="btn btn-primary my_btn"
+              data-bs-toggle="modal"
+              data-bs-target="#get_free_staff"
+            >
+              Заказать бесплатный образец
+            </button>
           </div>
         </div>
       </div>
@@ -82,87 +95,85 @@
 
     <!-- Modal -->
     <div
-    class="modal fade"
-    id="get_free_staff"
-    tabindex="-1"
-    aria-labelledby="get_free_staffLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="get_free_staffLabel">
-            Параметры заказа
-          </h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <div class="row justify-content-center">
-            <input
-              type="text"
-              placeholder="Наименование организации"
-              name=""
-              id=""
-              class="modal_data"
-            />
-            <input
-              type="text"
-              placeholder="Ваше имя"
-              name=""
-              id=""
-              class="modal_data"
-            />
-            <input
-              type="text"
-              placeholder="Ваш email"
-              name=""
-              id=""
-              class="modal_data"
-            />
-            <input
-              type="text"
-              placeholder="Ваш номер телефона"
-              name=""
-              id=""
-              class="modal_data"
-            />
-            <input
-              type="text"
-              placeholder="Ваш адрес"
-              name=""
-              id=""
-              class="modal_data"
-            />
-            <textarea
-              placeholder="Пожелания к заказу"
-              name=""
-              id=""
-              cols="30"
-              rows="5"
-              class="modal_data"
-            ></textarea>
+      class="modal fade"
+      id="get_free_staff"
+      tabindex="-1"
+      aria-labelledby="get_free_staffLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="get_free_staffLabel">
+              Параметры заказа
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Закрыть
-          </button>
-          <button type="button" class="btn btn-primary">
-            Заказать
-          </button>
+          <div class="modal-body">
+            <div class="row justify-content-center">
+              <input
+                type="text"
+                placeholder="Наименование организации"
+                name=""
+                id=""
+                class="modal_data"
+              />
+              <input
+                type="text"
+                placeholder="Ваше имя"
+                name=""
+                id=""
+                class="modal_data"
+              />
+              <input
+                type="text"
+                placeholder="Ваш email"
+                name=""
+                id=""
+                class="modal_data"
+              />
+              <input
+                type="text"
+                placeholder="Ваш номер телефона"
+                name=""
+                id=""
+                class="modal_data"
+              />
+              <input
+                type="text"
+                placeholder="Ваш адрес"
+                name=""
+                id=""
+                class="modal_data"
+              />
+              <textarea
+                placeholder="Пожелания к заказу"
+                name=""
+                id=""
+                cols="30"
+                rows="5"
+                class="modal_data"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Закрыть
+            </button>
+            <button type="button" class="btn btn-primary">Заказать</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
     <footer>
       <div class="container">
