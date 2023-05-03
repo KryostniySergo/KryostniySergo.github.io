@@ -13,7 +13,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="https://unpkg.com/libphonenumber-js@1.9.6/bundle/libphonenumber-max.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 
     <title>Главная</title>
   </head>
@@ -212,46 +213,41 @@
                     <input
                       type="text"
                       placeholder="Наименование организации"
-                      name=""
-                      id=""
-                      class="modal_data"
+                      name="org_name"
+                      class="modal_data get_free_staff"
                     />
                     <input
                       type="text"
                       placeholder="Ваше имя"
-                      name=""
-                      id=""
-                      class="modal_data"
+                      name="name"
+                      class="modal_data get_free_staff"
                     />
                     <input
                       type="text"
                       placeholder="Ваш email"
-                      name=""
-                      id=""
-                      class="modal_data"
+                      name="email"
+                      class="modal_data get_free_staff"
                     />
                     <input
-                      type="text"
+                      type="tel"
                       placeholder="Ваш номер телефона"
                       maxlength="12"
                       name="phone"
-                      class="modal_data phone"
-                      onclick="addNum()"
+                      class="modal_data get_free_staff phone"
+                      onclick=""
                     />
                     <input
                       type="text"
                       placeholder="Ваш адрес"
-                      name=""
-                      id=""
-                      class="modal_data"
+                      name="adress"
+                      class="modal_data get_free_staff"
                     />
                     <textarea
                       placeholder="Пожелания к заказу"
-                      name=""
-                      id=""
+                      name="just_text"
                       cols="30"
                       rows="5"
-                      class="modal_data"
+                      class="modal_data get_free_staff"
                     ></textarea>
                   </div>
                 </div>
@@ -263,7 +259,7 @@
                   >
                     Закрыть
                   </button>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn btn-primary" onclick="freestaff_func()">
                     Заказать
                   </button>
                 </div>
@@ -296,39 +292,36 @@
                     <input
                       type="text"
                       placeholder="Наименование организации"
-                      name=""
-                      id=""
-                      class="modal_data"
+                      name="org_name"
+                      class="modal_data buySomeProduct"
                     />
                     <input
                       type="text"
                       placeholder="Ваше имя"
-                      name=""
-                      id=""
-                      class="modal_data"
+                      name="name"
+                      class="modal_data buySomeProduct"
                     />
                     <input
                       type="text"
                       placeholder="Ваш email"
-                      name=""
-                      id=""
-                      class="modal_data"
+                      name="email"
+                      class="modal_data buySomeProduct"
                     />
                     <input
                       type="text"
                       placeholder="Ваш номер телефона"
                       maxlength="12"
                       name="phone"
-                      class="modal_data phone"
-                      onclick="addNum()"
+                      class="modal_data buySomeProduct phone"
+                      onclick=""
                     />
                     <textarea
                       placeholder="Пожелания к заказу"
-                      name=""
+                      name="just_text"
                       id=""
                       cols="30"
                       rows="5"
-                      class="modal_data"
+                      class="modal_data buySomeProduct"
                     ></textarea>
                     <p id="num_of_product_modal" class="modal_data">Количество товара: </p>
                   </div>
@@ -341,7 +334,7 @@
                   >
                     Закрыть
                   </button>
-                  <button type="button" class="btn btn-primary">Купить</button>
+                  <button type="button" class="btn btn-primary" onclick="buySome_func()">Купить</button>
                 </div>
               </div>
             </div>
@@ -505,7 +498,7 @@
 
             <input
               type="text"
-              name=""
+              name="name"
               id=""
               class="any_question_item col-10 col-xs-6 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6"
               placeholder="Ваше имя"
@@ -514,7 +507,7 @@
           <div class="row justify-content-center">
             <input
               type="text"
-              name=""
+              name="org_name"
               id=""
               class="any_question_item col-10 col-xs-6 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6"
               placeholder="Название компании"
@@ -522,16 +515,16 @@
           </div>
           <div class="row justify-content-center">
             <input
-              type="text"
-              name=""
+              type="tel"
+              name="phone"
               id=""
-              class="any_question_item col-10 col-xs-6 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6"
+              class="any_question_item phone col-10 col-xs-6 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6"
               placeholder="Контактный телефон"
             />
           </div>
           <div class="row justify-content-center">
             <textarea
-              name=""
+              name="just_text"
               id="any_question_item_big"
               cols="80"
               rows="24"
@@ -544,6 +537,7 @@
               type="button"
               value="Отправить заявку"
               class="any_question_item col-6 col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+              onclick="last_question()"
             />
           </div>
         </div>

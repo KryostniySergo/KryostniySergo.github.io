@@ -14,6 +14,8 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/dilivery.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 
     <title>Доставка</title>
   </head>
@@ -80,100 +82,98 @@
           </div>
           <div class="delivery_item">
             Высылаем бесплатно образцы курьеской службой по запросу
-            <button
+          </div>
+          <button
               type="button"
-              class="btn btn-primary my_btn"
+              class="btn btn-primary delivery_item my_btn"
               data-bs-toggle="modal"
               data-bs-target="#get_free_staff"
             >
               Заказать бесплатный образец
             </button>
-          </div>
         </div>
       </div>
     </main>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="get_free_staff"
-      tabindex="-1"
-      aria-labelledby="get_free_staffLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="get_free_staffLabel">
-              Параметры заказа
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="row justify-content-center">
-              <input
-                type="text"
-                placeholder="Наименование организации"
-                name=""
-                id=""
-                class="modal_data"
-              />
-              <input
-                type="text"
-                placeholder="Ваше имя"
-                name=""
-                id=""
-                class="modal_data"
-              />
-              <input
-                type="text"
-                placeholder="Ваш email"
-                name=""
-                id=""
-                class="modal_data"
-              />
-              <input
-                type="text"
-                placeholder="Ваш номер телефона"
-                name=""
-                id=""
-                class="modal_data"
-              />
-              <input
-                type="text"
-                placeholder="Ваш адрес"
-                name=""
-                id=""
-                class="modal_data"
-              />
-              <textarea
-                placeholder="Пожелания к заказу"
-                name=""
-                id=""
-                cols="30"
-                rows="5"
-                class="modal_data"
-              ></textarea>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Закрыть
-            </button>
-            <button type="button" class="btn btn-primary">Заказать</button>
-          </div>
-        </div>
-      </div>
-    </div>
+   <!-- Modal -->
+   <div
+   class="modal fade"
+   id="get_free_staff"
+   tabindex="-1"
+   aria-labelledby="get_free_staffLabel"
+   aria-hidden="true"
+ >
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="get_free_staffLabel">
+           Параметры заказа
+         </h5>
+         <button
+           type="button"
+           class="btn-close"
+           data-bs-dismiss="modal"
+           aria-label="Close"
+         ></button>
+       </div>
+       <div class="modal-body">
+         <div class="row justify-content-center">
+           <input
+             type="text"
+             placeholder="Наименование организации"
+             name="org_name"
+             class="modal_data get_free_staff"
+           />
+           <input
+             type="text"
+             placeholder="Ваше имя"
+             name="name"
+             class="modal_data get_free_staff"
+           />
+           <input
+             type="text"
+             placeholder="Ваш email"
+             name="email"
+             class="modal_data get_free_staff"
+           />
+           <input
+             type="tel"
+             placeholder="Ваш номер телефона"
+             maxlength="12"
+             name="phone"
+             class="modal_data get_free_staff phone"
+             onclick=""
+           />
+           <input
+             type="text"
+             placeholder="Ваш адрес"
+             name="adress"
+             class="modal_data get_free_staff"
+           />
+           <textarea
+             placeholder="Пожелания к заказу"
+             name="just_text"
+             cols="30"
+             rows="5"
+             class="modal_data get_free_staff"
+           ></textarea>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button
+           type="button"
+           class="btn btn-secondary"
+           data-bs-dismiss="modal"
+         >
+           Закрыть
+         </button>
+         <button type="button" class="btn btn-primary" onclick="freestaff_func()">
+           Заказать
+         </button>
+       </div>
+     </div>
+   </div>
+ </div>
 
     <footer>
       <div class="container">
@@ -192,6 +192,7 @@
       </div>
     </footer>
 
+     <script src="./js/telphone.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
