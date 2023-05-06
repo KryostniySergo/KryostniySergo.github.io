@@ -116,6 +116,10 @@ h1 {
   background-color: var(--button_bg_color);
 }
 
+.description{
+  margin-top: var(--gap_section);
+}
+
 #description_img_parent {
   display: flex;
   justify-content: end;
